@@ -1,0 +1,251 @@
+
+javascript basics
+	scrpiting language run inside of a larger environment, normally outside environment injects in interfaces to interact with outside environment
+		document & navigator in browsers (1)
+		nodejs examples (2)
+		shibboleth example (3)
+	weakly typed, object based (4)
+	data types
+		https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures
+		primitives: string, number, boolean, null, undefined, symbol
+			pass by value 
+		Non-primatives: functions, objects, arrays, interfaces
+			pass by reference
+	memory management, garbage collection, references
+		https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_Management
+	scope (5)
+		https://toddmotto.com/everything-you-wanted-to-know-about-javascript-scope/
+		global, local, function, not while/for
+		lexical scope / closure (nesting functions for example)
+		this
+		hoisting
+	Objects & arrays (6)
+	Functions (7)
+		call & apply
+		bind
+		arguments
+			functions dont require parameters, variable length arguments
+			var f = function(arg1){
+			 console.log("arg1 is: "+arg1);
+			 for(i=0;i<arguments.length;i++){   
+				console.log(arguments[i]);
+			 }
+			}
+			f(1,"asdf",{a:1});
+			var f2 = f.bind(null,"23")
+		arrow functions
+			https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+			An arrow function expression has a shorter syntax than a function expression and does not have its own this, arguments, super, or new.target. These function expressions are best suited for non-method functions, and they cannot be used as constructors.
+	events, callbacks (8)
+	promises
+		https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
+		"I owe the owner of this token an answer when I know it"
+		states: pending, fufilled, rejected
+		chainable, .then(f).then(f2)
+
+		promise.all([...]) 
+			returns a new promise that only fires resolve when all promises inside it's argument have resolved
+			or when the first argument rejects
+			think of it as an AND over all it's arguments
+
+		promise.race([...])
+			returns a new promise that resolves or rejects as soon as the first promise argument resolves or rejects
+			think of it as an OR over all it's arguments
+
+		Promises and changing data
+		
+dom intro https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction
+
+
+
+https://www.destroyallsoftware.com/talks/wat 
+
+
+
+//Objects, closures, separation of concerns, stay out of global
+var counter = (function(){
+	var count = 0;
+	return {
+		increment: function(){
+			count++;
+		},
+		getValue: function(){
+			return count;
+		}
+	};
+})();
+console.log(counter.value()); // logs 0
+counter.increment();
+counter.increment();
+console.log(counter.value()); // logs 2
+
+//can't access count
+console.log(count);
+
+https://en.wikipedia.org/wiki/Immediately-invoked_function_expression
+
+
+Button example
+	http://craigb.people.clemson.edu/2017cpsc4820/examples/buttons.html
+
+
+
+XHR, AJAX definitions
+
+Despite the name we use mostly json documents today
+
+JSON Format
+https://en.wikipedia.org/wiki/JSON
+
+JSONP format
+https://en.wikipedia.org/wiki/JSONP
+
+Async requests: ask now, handle...whenever
+Promises: 
+	"I owe the owner of this token an answer when I know it"
+	https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
+	states: pending, fufilled, rejected
+	chainable, .then(f).then(f2)
+
+	var myFirstPromise = new Promise((resolve, reject) => {
+		// do something asynchronous which eventually calls either:
+		//
+		//   resolve(someValue); // fulfilled
+		// or
+		//   reject("failure reason"); // rejected
+	});
+
+	var promise1 = new Promise((resolve, reject) => {
+		// We call resolve(...) when what we were doing asynchronously was successful, and reject(...) when it failed.
+		// In this example, we use setTimeout(...) to simulate async code.
+		// In reality, you will probably be using something like XHR or an HTML5 API.
+		setTimeout(function(){
+			resolve("Success!"); // Yay! Everything went well!
+		}, 250);
+	});
+
+	var promise2 = promise1.then((successMessage) => {
+		// successMessage is whatever we passed in the resolve(...) function above.
+		// It doesn't have to be a string, but if it is only a succeed message, it probably will be.
+		console.log("Yay! " + successMessage);
+
+	});
+
+	try erroring inside the first .then and see what happens to subsequent calls.
+
+	promise.all([...]) 
+		returns a new promise that only fires resolve when all promises inside it's argument have resolved
+		or when the first argument rejects
+		think of it as an AND over all it's arguments
+
+	promise.race([...])
+		returns a new promise that resolves or rejects as soon as the first promise argument resolves or rejects
+		think of it as an OR over all it's arguments
+
+	Promises and changing data
+
+
+
+npm
+	node package manager
+	npm install <package>
+		creates a node_modules directory where you currently are
+		puts packages in ther
+	npm install
+		looks at packages.json to know what to install
+	npm install -g <package>
+		installs package globally
+	in node
+		var express = require('express');
+		this will look for node_modules first in its own directory
+		then in every directory up from there
+	better to not install globally except for things that are used by the SYSTEM
+		jshint on my desktop is an example
+		sublime calls out to the system to use jshint so it should be installed at a global level
+		nodejs projects, on the otherhand, might have different dependencies for each project, and you dont wanna require a version update for ever app
+	best to use packages.json to define your required packages and install them locally
+		specify version numbers in packages.json
+
+Node
+	basic nodejs http server
+		var http = require("http");
+
+		http.createServer(function (request, response) {
+
+			// Send the HTTP header 
+			// HTTP Status: 200 : OK
+			// Content Type: text/plain
+			response.writeHead(200, {'Content-Type': 'text/plain'});
+
+			// Send the response body as "Hello World"
+			response.end('Hello World\n');
+		}).listen(8081);
+
+		// Console will print the message
+		console.log('Server running at http://127.0.0.1:8081/');
+
+	basic nodejs expressjs server
+		var express = require('express');
+		var app = express();
+		app.get('/', function (req, res) {
+			res.send('Hello World!');
+		});
+		app.listen(3000, function () {
+			console.log('Example app listening on port 3000!');
+		});
+
+	In both examples, the code would be run by executing the js file
+		node api.js
+			this will run and not return to the console until it stops running
+			any console.logs or errors will show in the console that ran the node command
+		Unlike the php we wrote in project 4, this has all the code for multiple HTTP paths all defined in 1 file
+	Focusing on express now
+	Every request executes a callback function and passes in 
+		request, req
+			http://expressjs.com/en/api.html#req (for express)
+			contains info about the incoming http request
+				body
+				baseURL
+				cookies
+				ip
+				app (pointer back to the express app obj)
+				etc
+		response, res
+			http://expressjs.com/en/api.html#res
+			Your reply to the browser
+			res.status(200);
+			res.send("text");
+			res.json({some:object});
+			res.end();
+			etc
+		Use res to send data to browser, console logs to the ubuntu console
+	Express does a lot of middleware stuff for you
+		listen for paths and http methods
+		express will handle cookies
+		decode request body
+		decode get params, URL params
+		has hooks for authentication
+		sessions
+	Express path examples
+		http://expressjs.com/en/api.html#path-examples
+
+	Some Cool new JS features from ES6
+		(not on this quiz, maybe next one)
+		es6 generators
+			https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*
+		es6 spread
+			https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator
+
+		var copyThis = {var1: 1, var2: 2}
+		keyIwantToChange = 'foo';
+		valueThatitshouldbe = 'bar';
+		return {
+			...copyThis,
+			[keyIwantToChange]:valueThatitshouldbe
+		}
+	React Development
+		create-react-app teaching
+		yarn start
+			runs nodejs
+			watches src directory for changes
+			recompiles code
