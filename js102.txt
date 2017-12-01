@@ -1,0 +1,72 @@
+nodejs scripting: oktalogs
+	goes through idp log entries (csv)	
+		index=splunk_shibboleth_idp  source="/var/log/shibboleth-idp/idp-process.log" okta "Shibboleth-Audit.SSO:275"
+	pulls out auth'd username
+	counts number of times that user shows up in logs
+	does ldap lookup for primary affiliation
+	outputs csv
+	functions
+		fs.readFile
+			loads file contents into string
+			split on newLines
+			loop through lines
+				getUsername from each line
+				incrementUsername for each username
+			loop through aggregated list of users
+				do LDAP searches to get affiliation of each user
+					http://ldapjs.org/client.html
+			done
+		getUsername
+			given a line from logs, pull out the username or return false
+		incrementUsername
+			add 1 to the number of times the username has appeared in the logs
+		done
+			write out a resulting csv file
+
+Write clientside browser based tic tac toe
+	very basic html file (tictactoe/index.html)
+	buttons with -, x, or o 
+	ai is random
+	detects win conditions and cat games
+	allows comp to go first
+
+	functions
+		start
+			create all 9 buttons, br every 3
+			bind in gridclick
+			create objects in grid holding the node and value
+		gridclick
+			check if button was already set
+			update button text and grid obj value
+			checkState
+			call AI
+			checkState
+		checkState
+			look for wins in each row
+			look for wins in each col
+			look for wins in both diags
+			is board full?
+		AI
+			Go through every grid node and check value
+			if empty add to list of empties
+			pick 1 at random
+		endGame
+			disable all grid buttons
+			show restart game button
+			display game state (win lose cat?)
+		Wire in comp goes first
+			add button at start
+				started = true;
+				AI();
+				compNode.parentNode.removeChild(compNode);
+			remove compNode in 1st gridClick
+	(tictactoe/tictactoe_final.js)
+Write expressjs rest api
+	4 types of entities
+		customers
+		environments
+		projects
+		roles
+	get all, get specific, update, create, delete
+	admin-on-rest UI?
+	

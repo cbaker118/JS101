@@ -1,0 +1,425 @@
+[
+    {
+        "Description": "AD Domain Controller",
+        "Role": "ADC"
+    },
+    {
+        "Description": "Application Server",
+        "Role": "APP"
+    },
+    {
+        "Description": "Atlassian Suite",
+        "Role": "ATL"
+    },
+    {
+        "Description": "Anti-Virus",
+        "Role": "AVS"
+    },
+    {
+        "Description": "Batch Server",
+        "Role": "BAT"
+    },
+    {
+        "Description": "BitBucket Server",
+        "Role": "BIT"
+    },
+    {
+        "Description": "Bonita Server",
+        "Role": "BON"
+    },
+    {
+        "Description": "Bosch Server",
+        "Role": "BSH"
+    },
+    {
+        "Description": "Bastion Host",
+        "Role": "BST"
+    },
+    {
+        "Description": "Configuration Management",
+        "Role": "CFG"
+    },
+    {
+        "Description": "Confluence Server",
+        "Role": "CFL"
+    },
+    {
+        "Description": "--",
+        "Role": "CLT"
+    },
+    {
+        "Description": "Crystal Reports",
+        "Role": "CRY"
+    },
+    {
+        "Description": "Database Server (NOT Oracle or MySQL)",
+        "Role": "DBS"
+    },
+    {
+        "Description": "DataBase Tools",
+        "Role": "DBT"
+    },
+    {
+        "Description": "Data Collection Node (Splunk VMware App)",
+        "Role": "DCN"
+    },
+    {
+        "Description": "Distributed File System",
+        "Role": "DFS"
+    },
+    {
+        "Description": "DHCP Server",
+        "Role": "DHC"
+    },
+    {
+        "Description": "Data In Processing",
+        "Role": "DIP"
+    },
+    {
+        "Description": "DNS Server",
+        "Role": "DNS"
+    },
+    {
+        "Description": "--",
+        "Role": "DRS"
+    },
+    {
+        "Description": "External Landing Pad",
+        "Role": "ELP"
+    },
+    {
+        "Description": "Enterprise Serving Bus",
+        "Role": "ESB"
+    },
+    {
+        "Description": "--",
+        "Role": "ETS"
+    },
+    {
+        "Description": "Generic Internal File Server",
+        "Role": "FLS"
+    },
+    {
+        "Description": "FTP/SFTP Server",
+        "Role": "FTP"
+    },
+    {
+        "Description": "Forwarder (Splunk)",
+        "Role": "FWD"
+    },
+    {
+        "Description": "--",
+        "Role": "GEN"
+    },
+    {
+        "Description": "GIT Source Management Software",
+        "Role": "GIT"
+    },
+    {
+        "Description": "Head Node",
+        "Role": "HDN"
+    },
+    {
+        "Description": "Federal Hub Server",
+        "Role": "HUB"
+    },
+    {
+        "Description": "Identity Management",
+        "Role": "IDM"
+    },
+    {
+        "Description": "Internal Landing Pad",
+        "Role": "ILP"
+    },
+    {
+        "Description": "Indexer",
+        "Role": "IND"
+    },
+    {
+        "Description": "Ingest",
+        "Role": "ING"
+    },
+    {
+        "Description": "Inbound Web Services",
+        "Role": "IWS"
+    },
+    {
+        "Description": "JIRA Application",
+        "Role": "JIR"
+    },
+    {
+        "Description": "Kafka",
+        "Role": "KFK"
+    },
+    {
+        "Description": "Mail Server",
+        "Role": "MAI"
+    },
+    {
+        "Description": "Legacy Server",
+        "Role": "LEG"
+    },
+    {
+        "Description": "Legato Server",
+        "Role": "LGT"
+    },
+    {
+        "Description": "Laboratory Information System",
+        "Role": "LIS"
+    },
+    {
+        "Description": "LAMP Server",
+        "Role": "LMP"
+    },
+    {
+        "Description": "License Management Tool",
+        "Role": "LMT"
+    },
+    {
+        "Description": "LOG Server",
+        "Role": "LOG"
+    },
+    {
+        "Description": "Multi-Factor Authentication",
+        "Role": "MFA"
+    },
+    {
+        "Description": "Managed File Transfer",
+        "Role": "MFT"
+    },
+    {
+        "Description": "Monitoring Server",
+        "Role": "MON"
+    },
+    {
+        "Description": "Splunk Master Node",
+        "Role": "MST"
+    },
+    {
+        "Description": "Mattermost Application",
+        "Role": "MTM"
+    },
+    {
+        "Description": "Mule Server",
+        "Role": "MUL"
+    },
+    {
+        "Description": "Linux MySQL",
+        "Role": "MYS"
+    },
+    {
+        "Description": "Monitoring - Nagios Server",
+        "Role": "NAG"
+    },
+    {
+        "Description": "Monitoring - NDB Server",
+        "Role": "NDB"
+    },
+    {
+        "Description": "NFS - Share Server",
+        "Role": "NFS"
+    },
+    {
+        "Description": "Time Server",
+        "Role": "NTP"
+    },
+    {
+        "Description": "Oracle Data Guard (failover ## should mirror production ##)",
+        "Role": "ODG"
+    },
+    {
+        "Description": "Oracle Database",
+        "Role": "ORA"
+    },
+    {
+        "Description": "Oracle/ Other Service Bus",
+        "Role": "OSB"
+    },
+    {
+        "Description": "PointNClick Server",
+        "Role": "PNC"
+    },
+    {
+        "Description": "Proof of Concept",
+        "Role": "POC"
+    },
+    {
+        "Description": "Portal (?)",
+        "Role": "POR"
+    },
+    {
+        "Description": "Print Server",
+        "Role": "PRT"
+    },
+    {
+        "Description": "Proxy Server",
+        "Role": "PRX"
+    },
+    {
+        "Description": "Publish",
+        "Role": "PUB"
+    },
+    {
+        "Description": "Qlik View",
+        "Role": "QLK"
+    },
+    {
+        "Description": "Oracle RAC Database",
+        "Role": "RAC"
+    },
+    {
+        "Description": "RAD Server",
+        "Role": "RAD"
+    },
+    {
+        "Description": "RAC Data Guard",
+        "Role": "RDG"
+    },
+    {
+        "Description": "RWB Server",
+        "Role": "RWB"
+    },
+    {
+        "Description": "Santricity",
+        "Role": "SAN"
+    },
+    {
+        "Description": "WinScribe",
+        "Role": "SCB"
+    },
+    {
+        "Description": "SCAN Server",
+        "Role": "SCN"
+    },
+    {
+        "Description": "System Center Suite",
+        "Role": "SCS"
+    },
+    {
+        "Description": "Security Server",
+        "Role": "SEC"
+    },
+    {
+        "Description": "Search Node",
+        "Role": "SER"
+    },
+    {
+        "Description": "Search Head (Splunk)",
+        "Role": "SHD"
+    },
+    {
+        "Description": "Salt Master (NACL, SALT)",
+        "Role": "SLT"
+    },
+    {
+        "Description": "Security Assertion Markup Language (SAML)",
+        "Role": "SML"
+    },
+    {
+        "Description": "Sandbox Server",
+        "Role": "SND"
+    },
+    {
+        "Description": "SOLE Application Transfer",
+        "Role": "SOL"
+    },
+    {
+        "Description": "Splunk Server",
+        "Role": "SPL"
+    },
+    {
+        "Description": "Space Walk",
+        "Role": "SPW"
+    },
+    {
+        "Description": "Windows MSSQL Database",
+        "Role": "SQL"
+    },
+    {
+        "Description": "Storage Replica Services",
+        "Role": "SRS"
+    },
+    {
+        "Description": "saltstack-enterprise-console",
+        "Role": "SSE"
+    },
+    {
+        "Description": "Storage Server",
+        "Role": "STG"
+    },
+    {
+        "Description": "Software Update Services",
+        "Role": "SUS"
+    },
+    {
+        "Description": "Subversion Server",
+        "Role": "SVN"
+    },
+    {
+        "Description": "Sybase",
+        "Role": "SYB"
+    },
+    {
+        "Description": "TAC Server",
+        "Role": "TAC"
+    },
+    {
+        "Description": "Test Server",
+        "Role": "TST"
+    },
+    {
+        "Description": "Job Scheduling",
+        "Role": "UC4"
+    },
+    {
+        "Description": "Udoit server",
+        "Role": "UDO"
+    },
+    {
+        "Description": "Utility/Development Tool Server",
+        "Role": "UTL"
+    },
+    {
+        "Description": "--",
+        "Role": "VLT"
+    },
+    {
+        "Description": "Virtual Machine Host",
+        "Role": "VMH"
+    },
+    {
+        "Description": "WebSphere Application Server",
+        "Role": "WAS"
+    },
+    {
+        "Description": "General Web Server",
+        "Role": "WEB"
+    },
+    {
+        "Description": "Witness Server for SQL Database Servers",
+        "Role": "WIT"
+    },
+    {
+        "Description": "xCAT",
+        "Role": "XCT"
+    },
+    {
+        "Description": "XML Formatting Server",
+        "Role": "XML"
+    },
+    {
+        "Description": "Zabbix",
+        "Role": "ZAB or ZBX"
+    },
+    {
+        "Description": "Zettaknight",
+        "Role": "ZET"
+    },
+    {
+        "Role": "ZFS Z File System"
+    },
+    {
+        "Description": "Zerto",
+        "Role": "ZRT"
+    }
+]

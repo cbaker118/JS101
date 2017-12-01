@@ -1,0 +1,38 @@
+[
+    {
+        "Description": "Development Testing",
+        "Environment": "D"
+    },
+    {
+        "Description": "Learning/Training (previously TRN)",
+        "Environment": "L"
+    },
+    {
+        "Description": "(Maintenance) Production Support",
+        "Environment": "M"
+    },
+    {
+        "Description": "Production",
+        "Environment": "P"
+    },
+    {
+        "Description": "Quality Assurance",
+        "Environment": "Q"
+    },
+    {
+        "Description": "Disaster Recovery Site",
+        "Environment": "R"
+    },
+    {
+        "Description": "Staging",
+        "Environment": "S"
+    },
+    {
+        "Description": "User Acceptance Testing (UAT)",
+        "Environment": "U"
+    },
+    {
+        "Description": "Sandbox – state of the machine is not operationally important",
+        "Environment": "Z"
+    }
+]

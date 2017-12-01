@@ -1,0 +1,118 @@
+[
+    {
+        "Description": "2-Factor Authentication",
+        "Project Code": "2FA"
+    },
+    {
+        "Description": "Adobe CoNnect",
+        "Project Code": "ACN"
+    },
+    {
+        "Description": "Atlassian Microservices",
+        "Project Code": "ATL"
+    },
+    {
+        "Description": "BlackBaud",
+        "Project Code": "BKB"
+    },
+    {
+        "Description": "Business Objects (Data Warehouse)",
+        "Project Code": "BOE"
+    },
+    {
+        "Description": "Core Services on which all other systems may depend (DNS, AD, etc.) [HCI, MEM, MMI]",
+        "Project Code": "COR"
+    },
+    {
+        "Description": "Footprints / TigerTracks / ITHelp",
+        "Project Code": "FPS"
+    },
+    {
+        "Description": "General Purpose",
+        "Project Code": "GEN"
+    },
+    {
+        "Description": "Gigamon networking hardware-related servers",
+        "Project Code": "GIG"
+    },
+    {
+        "Description": "Hyperion (University budgeting software)",
+        "Project Code": "HYP"
+    },
+    {
+        "Description": "InfoEd",
+        "Project Code": "IED"
+    },
+    {
+        "Description": "Internal ISO projects to develop capabilities needed for customers.",
+        "Project Code": "INF"
+    },
+    {
+        "Description": "Insight is the application monitoring tool.",
+        "Project Code": "INS"
+    },
+    {
+        "Description": "Monitoring - Spectrum Replacement",
+        "Project Code": "MON"
+    },
+    {
+        "Description": "Non-Project-Specific",
+        "Project Code": "NPS"
+    },
+    {
+        "Description": "Oracle Enterprise Manager",
+        "Project Code": "OEM"
+    },
+    {
+        "Description": "OnBase",
+        "Project Code": "ONB"
+    },
+    {
+        "Description": "Open Duty",
+        "Project Code": "OPD"
+    },
+    {
+        "Description": "PeopleSoft Finance",
+        "Project Code": "PFS"
+    },
+    {
+        "Description": "PeopleSoft HR",
+        "Project Code": "PHR"
+    },
+    {
+        "Description": "SDI General Purpose servers (not tied to specific servers)",
+        "Project Code": "SDI"
+    },
+    {
+        "Description": "SIS/Banner",
+        "Project Code": "SIS"
+    },
+    {
+        "Description": "Streaming Video (Ensemble and Wowza)",
+        "Project Code": "STV"
+    },
+    {
+        "Description": "StealthWatch",
+        "Project Code": "STW"
+    },
+    {
+        "Description": "TigerOne",
+        "Project Code": "TG1"
+    },
+    {
+        "Description": "TeamMate Audit Management ",
+        "Project Code": "TMA"
+    },
+    {
+        "Description": "Trend Micro Security",
+        "Project Code": "TMS"
+    },
+    {
+        "Description": "Main Clemson Website",
+        "Project Code": "WWW"
+    },
+    {
+        "Description": "Xclarify",
+        "Project Code": "XCL"
+    }
+]
